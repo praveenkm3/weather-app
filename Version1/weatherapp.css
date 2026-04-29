@@ -1,0 +1,48 @@
+body{
+  background-color: rgb(178, 200, 208);
+}
+.card {
+  width: 300px;
+  border: 1px solid #232020;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial;
+  align-content: center;
+  margin-left: 500px;
+  margin-top: 250px;
+}
+
+.card-header {
+  background: #111111;
+  color: whitesmoke;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 10px;
+  background: whitesmoke;
+}
+
+.card-footer {
+  background: #8f8a8a;
+  padding: 10px;
+  text-align: center;
+}
+#btn{
+border: none;
+border-radius: 2em;
+cursor: pointer;
+height: 25px;
+}
+#city{
+border: none;
+border-radius: 5em;
+padding: 5px 0px 5px 15px;
+}
+p{
+  margin: 0px 0px 25px 90px;
+}
+#city{
+  border: none;
+}
