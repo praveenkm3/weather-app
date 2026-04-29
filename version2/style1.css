@@ -1,0 +1,365 @@
+/* .parent{
+    background-color: rgb(159, 163, 159);
+    padding: 20px;
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    border-radius: 1em;
+}
+.box1{
+    border-radius: 1em;
+
+}
+.box2{
+    background-color: rgb(159, 163, 159);
+    border-radius: 1em;
+}
+.image img{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    border-radius: 2em;
+}
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.text {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.login, .signup {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.login {
+    background: black;
+    color: white;
+}
+
+.signup {
+    background: white;
+    color: black;
+}
+
+.loginBox {
+    background: #f5f5f5;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+}
+.loginBox input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#loginbtn {
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 10px;
+} */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #2c3440;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* MAIN CONTAINER */
+.parent {
+    width: 100%;         
+    height: 100vh; 
+    display: flex;
+    gap: 25px;   
+    background: #0f1a2b;
+    border-radius: 25px;
+    padding: 20px;  
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* LEFT PANEL */
+.box1 {
+    margin-top: 45px;
+    height: 90vh;
+    width: 50%;
+    background: #1f2a3a;  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+/* RIGHT PANEL */
+.box2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+}
+
+.image img {
+    width: 70%;
+    object-fit: contain;
+}
+
+/* RIGHT PANEL */
+/* .box2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; 
+} */
+
+/* ROOT */
+#root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;              /* above background */
+    pointer-events: auto;    /* allow interaction */
+}
+
+/* Keep card above root initially */
+.card {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;         
+    width: 220px;
+    padding: 0;        
+    background: transparent;   
+    box-shadow: none; 
+    background-color: black;
+}
+
+/* Ensure box2 is reference container */
+.box2 {
+    position: relative;
+}
+.icon {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 48px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.subtext {
+    color: #9aa4b2;
+    margin: 10px 0 30px;
+}
+
+/* BUTTONS */
+/* .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+} */
+.buttons {
+    display: flex;
+    flex-direction: column;   /* 🔥 makes them one under another */
+    gap: 15px;
+    width: 100%;
+}
+
+.login, .signup {
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* LOGIN BUTTON */
+.login {
+    background: transparent;
+    border: 1px solid #4a90e2;
+    color: #4a90e2;
+}
+
+.login:hover {
+    background: #4a90e2;
+    color: white;
+}
+
+/* SIGNUP BUTTON */
+.signup {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+}
+
+.signup:hover {
+    transform: translateY(-2px);
+}
+
+/* login and signup */
+/* AUTH BOX (Login / Signup) */
+.loginBox {
+    background: #1f2a3a;
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    text-align: left;
+    z-index: 2;
+}
+
+/* Title */
+.loginBox h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Labels */
+.loginBox label {
+    color: #9aa4b2;
+    font-size: 14px;
+}
+
+/* Inputs */
+.loginBox input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #2c3440;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Input focus */
+.loginBox input:focus {
+    border: 1px solid #4a90e2;
+}
+
+/* Button */
+.loginBox button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.loginBox button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74,144,226,0.4);
+}.icons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;   /* 👈 helps create hill base */
+    gap: 40px;
+    font-size: 55px;
+}
+
+/* Colors + hill structure using CSS variables */
+.icons i:nth-child(1) {
+    color: #ff8c00; /* orange */
+    --y: 20px;
+}
+
+.icons i:nth-child(2) {
+    color: #ffffff; /* white */
+    --y: 0px;
+}
+
+.icons i:nth-child(3) {
+    color: #4a90e2; /* blue */
+    --y: -20px;
+}
+
+.icons i:nth-child(4) {
+    color: #ffd700; /* yellow */
+    --y: 10px;
+}
+
+/*  Base icon style */
+.icons i {
+    transform: translateY(var(--y));
+    transition: transform 0.3s;
+    animation: float 3s ease-in-out infinite;
+}
+
+/*  Hover effect */
+.icons i:hover {
+    transform: translateY(calc(var(--y) - 8px)) scale(1.2);
+}
+
+/*  Stagger animation */
+.icons i:nth-child(2) { animation-delay: 0.5s; }
+.icons i:nth-child(3) { animation-delay: 1s; }
+.icons i:nth-child(4) { animation-delay: 1.5s; }
+
+/* Floating animation (keeps hill shape) */
+@keyframes float {
+    0%   { transform: translateY(var(--y)); }
+    50%  { transform: translateY(calc(var(--y) - 12px)); }
+    100% { transform: translateY(var(--y)); }
+}
