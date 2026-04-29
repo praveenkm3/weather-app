@@ -102,7 +102,7 @@ body {
 
 .buttons {
     display: flex;
-    flex-direction: column;   /* 🔥 makes them one under another */
+    flex-direction: column;   
     gap: 15px;
     width: 100%;
 }
@@ -216,12 +216,12 @@ body {
 }
 
 .icons i:nth-child(3) {
-    color: #4a90e2; /* blue */
+    color: #4a90e2;  
     --y: -20px;
 }
 
 .icons i:nth-child(4) {
-    color: #ffd700; /* yellow */
+    color: #ffd700;  
     --y: 10px;
 }
 
