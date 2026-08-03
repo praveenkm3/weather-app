@@ -95,7 +95,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-# 🎧 Event Handling
+# Event Handling
 
 ---
 
