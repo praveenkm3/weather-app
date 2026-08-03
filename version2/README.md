@@ -1,10 +1,10 @@
-# 🌤️ Weather Application
+# Weather Application
 
 A modern weather web application with authentication, smart search, and real-time weather updates using API.
 
 ---
 
-# 🚀 Tech Stack Used
+# Tech Stack Used
 
 1. HTML  
 2. CSS  
@@ -12,7 +12,7 @@ A modern weather web application with authentication, smart search, and real-tim
 
 ---
 
-# 🔄 Work Flow
+#  Work Flow
 
 I divided this application into two major parts:
 
@@ -27,7 +27,7 @@ I divided this application into two major parts:
 
 ---
 
-# 🔐 Authentication
+#  Authentication
 
 ### Signup → `localStorage.setItem()`
 Stores username and password in browser storage.
@@ -37,7 +37,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-# 🧠 Architecture
+#  Architecture
 
 1. After login → Dashboard UI is rendered  
 2. User types in search box  
@@ -48,11 +48,11 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-# ⚙️ Functions & Event Handling
+#  Functions & Event Handling
 
 ---
 
-## 🔹 `showDashboard()`
+##  `showDashboard()`
 
 **Explanation:**
 - Replaces entire page UI using `document.body.innerHTML`
@@ -63,7 +63,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-## 🔹 `fetchWeather(city)`
+##  `fetchWeather(city)`
 
 **Explanation:**
 - Makes API request using `fetch()` to get data
@@ -74,7 +74,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-## 🔹 `getMatches(arr, prefix)`
+##  `getMatches(arr, prefix)`
 
 **Explanation:**
 - Calls `binarySearchPrefix()` to find a matching index
@@ -84,7 +84,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-## 🔹 `binarySearchPrefix(arr, prefix)`
+##  `binarySearchPrefix(arr, prefix)`
 
 **Explanation:**
 - Performs Binary Search on sorted array
@@ -99,7 +99,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-## 🔹 `signButton[0].addEventListener("click")`
+##  `signButton[0].addEventListener("click")`
 
 **Explanation:**
 - Displays signup form dynamically
@@ -109,7 +109,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-## 🔹 `loginButton[0].addEventListener("click")`
+## `loginButton[0].addEventListener("click")`
 
 **Explanation:**
 - Displays login form
@@ -120,7 +120,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-## 🔹 `searchInput.addEventListener("input")`
+##  `searchInput.addEventListener("input")`
 
 **Explanation:**
 - Triggers on every keystroke
@@ -130,7 +130,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-## 🔹 `searchInput.addEventListener("keydown")`
+##  `searchInput.addEventListener("keydown")`
 
 **Explanation:**
 - Detects when user presses Enter key
@@ -139,7 +139,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-## 🔹 `searchBtn.addEventListener("click")`
+##  `searchBtn.addEventListener("click")`
 
 **Explanation:**
 - Triggered when search button is clicked
@@ -149,7 +149,7 @@ Retrieves stored data and validates user credentials.
 
 ---
 
-# 📦 Data Structure
+# Data Structure
 
 ```js
 const cities = ["London", "Los Angels", "Lahore", "Lisbon", "New York", "Lucknow"];
